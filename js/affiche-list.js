@@ -68,6 +68,7 @@ const search = {
 
     },
 
+    //fct pour afficher le détail de l'élément selectionné
     showMeTab: function (e) {
         e.preventDefault();
         let element = e.currentTarget;

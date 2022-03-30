@@ -26,6 +26,7 @@ ul {}
 .cards {
     display: inline-block;
     text-align: center;
+    vertical-align: baseline;
     width: 100px;
     height: 100px;
     background-color: rgb(128, 128, 128, 0.3);

@@ -13,10 +13,10 @@ const produit = {
 
 const liste_data = [
     ["fournisseur", "lien", "type_produit", "nom", "tarif_ht", "tarif_ttc", "fdp"],
-    ["koylab", "<a>https:koylab.com/fr/produits/books/photo-books</a>", "album", "Photo Book", 40, 49.20, 16],
-    ["matisseopro", "<a>https:www.matisseopro.com/Produits/LivreRubis</a>", "album", "rubis1", 38.50, 47.36, 9.49],
-    ["matisseopro", "<a>https:www.matisseopro.com/Produits/LivreRubis</a>", "album", "rubis1", 38.50, 47.36, 9.49],
-    ["floricolor", "<a>https:www.floricolor.pt/fr/puer-collection.html</a>", "album", "puer collection1", 41.55, 51.11, 16.91],
+    ["koylab", "<a href='https:koylab.com/fr/produits/books/photo-books' target='_blank'>koylab</a>", "album", "Photo Book", 40, 49.20, 16],
+    ["matisseopro", "<a href='https:www.matisseopro.com/Produits/LivreRubis' target='_blank'>matisseopro</a>", "album", "rubis", 38.50, 47.36, 9.49],
+    ["matisseopro", "<a href='https:www.matisseopro.com/Produits/LivreRubis' target='_blank'>matisseopro</a>", "album", "rubis", 38.50, 47.36, 9.49],
+    ["floricolor", "<a href='https:www.floricolor.pt/fr/puer-collection.html' target='_blank'>floricolor</a>", "album", "puer collection", 41.55, 51.11, 16.91],
 ];
 
 /**
