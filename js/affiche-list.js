@@ -18,14 +18,13 @@ const search = {
 
     //fct qui recherche l'élément selectionné et renvoie une liste pour affichage et selection plus précise
     afficheCoice: function (valueToSearch) {
-        console.log(valueToSearch);
+
 
         let index = 0;
         //recherche de l'index à chercher dans chaque tableau
         for (i = 0; liste_data[0][i] != valueToSearch && i < liste_data[0].length; i++) {
             index++;
-            console.log(index);
-            console.log(liste_data[0][index]);
+
         }
 
 
@@ -33,6 +32,7 @@ const search = {
         if (tabValue == valueToSearch) {
 
             let blocAffichage = document.querySelector("#affichage");
+            blocAffichage.innerHTML="";
 
             //commence à 1 pour éviter d'afficher les labels
             for (i = 1; i < liste_data.length; i++) {
@@ -72,35 +72,71 @@ const search = {
     showMeTab: function (e) {
         e.preventDefault();
         let element = e.currentTarget;
-        console.log(element);
+        
         //let valeur = element.getAttribute("data-index");
         //let element = document.querySelector('label[data-index="' + indexTab + '"]');
         let cible = element.querySelector('label');
-        console.log(cible);
+        
         let indexTab = cible.dataset.index;
-        console.log(indexTab);
+        
 
         //const index = element.getAttribute("data-index");
         // let valeur = index.value;
         let blocResultat = document.querySelector("#resultat");
 
+        /**
+                for (i = 0; i < liste_data[0].length; i++) {
+                    let newElement = document.createElement('li');
+                    newElement.innerHTML = liste_data[0][i] + " = " + liste_data[indexTab][i];
+                    blocResultat.append(newElement);
+                }
+         */
+
+        //ligne des intitulé
+        let tableHeader = document.querySelector('[data-ligne="0"]');
+        tableHeader.innerHTML = "";
+        //ligne supplémentaire avec le contenu
+        let tablerow = document.querySelector('[data-ligne="1"]');
+        tablerow.innerHTML = "";
+
 
         for (i = 0; i < liste_data[0].length; i++) {
-            let newElement = document.createElement('li');
-            newElement.innerHTML = liste_data[0][i] + " = " + liste_data[indexTab][i];
-            blocResultat.append(newElement);
+
+            //création ligne th label et contenu 
+            let thHeader = document.createElement('th');
+            let thBody = document.createElement('th');
+            thHeader.innerHTML = "<th>" + liste_data[0][i] + "</th>";
+            thBody.innerHTML = "<th>" + liste_data[indexTab][i] + "</th>";
+            tableHeader.append(thHeader);
+            tablerow.append(thBody);
+
         }
-
-
-
-
-
     }
 
 
+    /**
+            <table>
+            <thead>
+                <tr>
+                    <th>table header1</th>
+                    <th>table header2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>table body1</td>
+                    <td>table body1</td>
+
+                </tr>
+            </tbody>
+        </table>
+
+     */
 
 
 }
+
+
 
 document.addEventListener('DOMContentLoaded', search.init);
 console.log();

@@ -40,3 +40,19 @@ ul {}
     box-shadow: 1px 1px 3px black;
     font-weight: bold;
 }
+
+table,
+td {
+        border: 1px solid #333;
+}
+/* style pour le tableau */
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+
+}
+
+th{
+    width: 10%;
+}
